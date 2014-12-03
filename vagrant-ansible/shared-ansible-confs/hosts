@@ -1,13 +1,13 @@
 [webserver]
 192.168.200.31
 
-[database]
+[dbservers]
 192.168.200.32
 
 # Group 'multi' with all servers
 [multi:children]
 webserver
-database
+dbservers
 
 # Variables that will be applied to all servers
  [multi:vars]
