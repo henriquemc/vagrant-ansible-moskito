@@ -6,6 +6,8 @@ sudo apt-get update
 
 if [ ! -f /usr/bin/ansible ]; then
   echo "Installing Ansible and dependencies."
-	sudo apt-get --no-install-recommends -q -y install ansible sshpass
+	#sudo apt-get --no-install-recommends -q -y install ansible sshpass
+	sudo apt-get install python-pip python-dev git make sshpass -y
+	pip install PyYAML jinja2 paramiko ansible
   echo "Ansible installed."
 fi 

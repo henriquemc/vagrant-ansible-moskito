@@ -13,7 +13,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     ansibleHost.vm.hostname = "ansible.host"
     ansibleHost.vm.box = "hashicorp/precise32"
     ansibleHost.vm.network "private_network", ip: "192.168.200.30"
-	ansibleHost.vm.synced_folder "../shared-ansible-confs", "/etc/ansible/"
+	ansibleHost.vm.synced_folder "../shared-ansible-confs", "/home/vagrant/ansible-confs"
 
     ansibleHost.vm.provider "virtualbox" do |v|
         v.customize [ "modifyvm", :id, "--cpus", "1" ]
